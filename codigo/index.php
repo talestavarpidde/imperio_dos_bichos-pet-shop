@@ -18,7 +18,7 @@
             <br>
             <input type="submit" value="Entrar">
         </form>
-        <a href="">Cadastre-se</a>
+        <a href="form_usuario.php">Cadastre-se</a>
     </div>
 </body>
 </html>
