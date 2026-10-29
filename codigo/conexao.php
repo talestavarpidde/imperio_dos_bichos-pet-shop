@@ -2,7 +2,7 @@
 $servidor = 'db';
 $usuario = 'root';
 $password = '123';
-$banco = 'banco_rede_social';
+$banco = 'pet_shop_ib';
 
 $conexao = mysqli_connect($servidor, $usuario, $password, $banco);
 ?>

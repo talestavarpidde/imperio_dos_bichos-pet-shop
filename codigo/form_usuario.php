@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Novo Usuário</h1>
-    <form action="" method="post">
+    <form action="save_usuario.php" method="post" enctype="multipart/form-data">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome">
         <br><br>
