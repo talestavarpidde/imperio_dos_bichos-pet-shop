@@ -229,6 +229,9 @@ INSERT INTO `pet_shop_ib`.`tipo_paciente` (`especie`, `porte`) VALUES
 
 
 -- administrador ou técnico
-INSERT INTO `pet_shop_ib`.`usuario` (`nome`, `email`, `senha`, `tipo`) VALUES
-('Administrador', 'admin@petshop.com', 'admin123', 'administrador'),
-('Técnico', 'tecnico@petshop.com', 'tecnico123', 'tecnico');
+INSERT INTO `pet_shop_ib`.`dono` (`nome_dono`, `data_nascimento_dono`, `cpf`, `endereco`, `email`, `senha`, `foto_dono`, `telefone`) VALUES
+-- Administrador do Sistema
+('Carlos Eduardo Silva', '1985-04-12', '123.456.789-01', 'Rua das Flores, 123, Centro', 'admin@petshopib.com', '$2y$10$ExemploDeHashCriptografadoAdmin123', 'admin.jpg', '(11) 98765-4321'),
+
+-- Técnico em Informática
+('Mariana Souza Costa', '1992-09-25', '987.654.321-09', 'Av. Principal, 456, Bairro Alto', 'suporte@petshopib.com', '$2y$10$ExemploDeHashCriptografadoTecnico456', 'tecnico.jpg', '(11) 91234-5678');
