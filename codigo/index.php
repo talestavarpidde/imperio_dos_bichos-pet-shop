@@ -9,7 +9,7 @@
     <div>
         <H1>Império dos Bichos</H1>
         <h5>Bem-Vindo</h5>
-        <form action="" method="post">
+        <form action="verifica_login.php" method="post">
             email:<br>
             <input type="email" name="email" required>
             <br>

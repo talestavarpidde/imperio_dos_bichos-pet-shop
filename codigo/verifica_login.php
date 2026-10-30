@@ -8,16 +8,16 @@
     $quantidade = mysqli_num_rows($resultado);
     if ($quantidade == 1) {
         $linha = mysqli_fetch_array($resultado);
-        $nome = $linha['nome'];
+        $nome_dono = $linha['nome_dono'];
         $email = $linha['email'];
-        $idusuario = $linha['idusuario'];
-        $foto = $linha['foto'];
+        $iddono = $linha['iddono'];
+        $foto_dono = $linha['foto_dono'];
         
         session_start();
         $_SESSION['email'] = $email;
-        $_SESSION['nome'] = $nome;
-        $_SESSION['idusuario'] = $idusuario;
-        $_SESSION['foto'] = $foto;
+        $_SESSION['nome_dono'] = $nome_dono;
+        $_SESSION['iddono'] = $iddono;
+        $_SESSION['foto_dono'] = $foto_dono;
         
         header("Location: home.php");
     }
