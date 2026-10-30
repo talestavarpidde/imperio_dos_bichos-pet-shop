@@ -21,8 +21,9 @@
         session_start();
         $_SESSION['email'] = $email;
         $_SESSION['nome'] = $nome;
+        $_SESSION['nome_dono'] = $nome;
         $_SESSION['iddono'] = $iddono;
-        $_SESSION['foto'] = $foto;
+        $_SESSION['foto_dono'] = $foto;
         
         header("Location: home.php");
     }

@@ -18,10 +18,10 @@
     $extensao = pathinfo($nome_arquivo, PATHINFO_EXTENSION);
 
     // CRIA O NOVO NOME COM A FUNÇÃO DE CRIAR NOME ALEATORIO
-    $novo_nome = uniqid() . "." . $extensao;
+    $novo_nome = $nome . uniqid() . "." . $extensao;
 
     // MOSTRA O CAMINHO DE DESTINO
-    $caminho_destino = "fotos_donos/" . $novo_nome;
+    $caminho_destino = "/../fotos_donos/" . $novo_nome;
 
     // MOVE PRO CAMINHO DE DESTINO
     move_uploaded_file($caminho_temporario, $caminho_destino);
