@@ -226,3 +226,9 @@ INSERT INTO `pet_shop_ib`.`tipo_paciente` (`especie`, `porte`) VALUES
 ('Coelho', 'Pequeno'),
 ('Porquinho-da-India', 'Pequeno'),
 ('Tartaruga/Jabuti', 'Pequeno');
+
+
+-- administrador ou técnico
+INSERT INTO `pet_shop_ib`.`usuario` (`nome`, `email`, `senha`, `tipo`) VALUES
+('Administrador', 'admin@petshop.com', 'admin123', 'administrador'),
+('Técnico', 'tecnico@petshop.com', 'tecnico123', 'tecnico');
