@@ -14,6 +14,6 @@
     <iframe class="home-top" src="mensoes/cabecalho.php" frameborder="0"></iframe>
     <iframe class="home-left" src="mensagens/menu.php" frameborder="0"></iframe>
     <iframe class="home-main" src="mensagens/conteudo.php" frameborder="0"></iframe>
-    <iframe class="home-bottom" src="mensagens/rodape.php" frameborder="0"></iframe>
+    <iframe class="home-bottom" src="mensoes/rodape.php" frameborder="0"></iframe>
 </body>
 </html>
