@@ -33,3 +33,11 @@
 .home-bottom {
     grid-area: bottom;
 }
+
+#foto_perfil {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+}

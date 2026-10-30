@@ -13,7 +13,7 @@
 <body class="home">
     <iframe class="home-top" src="mensoes/cabecalho.php" frameborder="0"></iframe>
     <iframe class="home-left" src="mensoes/menu.php" frameborder="0"></iframe>
-    <iframe class="home-main" src="mensagens/conteudo.php" frameborder="0"></iframe>
-    <iframe class="home-bottom" src="mensoes/rodape.html" frameborder="0"></iframe>
+    <iframe class="home-main" src="usuario/perfil_usuario.php" frameborder="0"></iframe>
+    <iframe class="home-bottom" src="mensoes/rodape.php" frameborder="0"></iframe>
 </body>
 </html>
