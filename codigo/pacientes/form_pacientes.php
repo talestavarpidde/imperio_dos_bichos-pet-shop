@@ -7,7 +7,7 @@
 </head>
 <body>
     Novo Pet:
-    <form action="save_paciente.php" method="post">
+    <form action="salvar_paciente.php" method="post">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome" required>
         <br>
@@ -22,6 +22,27 @@
             <option value="">Selecione</option>
             <option value="M">Macho</option>
             <option value="F">Fêmea</option>
+        </select>
+        <br>
+        <label for="raca">Raça/Porte:</label>
+        <select name="raca" id="raca" required>
+            <?php
+            
+            require_once("../conexao.php");
+            
+            $sql = "SELECT * FROM tipo_paciente;";
+            
+            $comando = mysqli_prepare($conexao, $sql);
+            mysqli_stmt_execute($comando);
+            $resultado = mysqli_stmt_get_result($comando);
+            
+            while ($linha = mysqli_fetch_array($resultado)) {
+                $idtipo_paciente = $linha['idtipo_paciente'];
+                $especie = $linha['especie'];
+                $porte = $linha['porte'];
+                echo "<option value='$idtipo_paciente'>$especie - $porte</option>";
+            }
+            ?>
         </select>
         <br>
         <button type="submit">Cadastrar</button>
