@@ -26,8 +26,10 @@
     // MOVE PRO CAMINHO DE DESTINO
     move_uploaded_file($caminho_temporario, $caminho_destino);
 
-    $sql = "INSERT INTO dono (nome_dono, data_nascimento_dono, cpf, endereco, email, senha, foto_dono, telefone) VALUES ('$nome', '$data_nascimento', '$cpf', '$endereco', '$email', '$senha', '$novo_nome', '$telefone')";
-
-    mysqli_query($conexao, $sql);
+    $sql = "INSERT INTO dono (nome_dono, data_nascimento_dono, cpf, endereco, email, senha, foto_dono, telefone) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, "ssssssss", $nome, $data_nascimento, $cpf, $endereco, $email, $senha, $novo_nome, $telefone);
+    mysqli_stmt_execute($comando);
 
     header("Location: ../index.php");
+    

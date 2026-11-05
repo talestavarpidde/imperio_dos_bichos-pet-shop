@@ -16,13 +16,20 @@ require_once("../session.php");
 <br><br><br><br><br>
 <?php
 $dono = $_SESSION['iddono'];
+
 require_once("../conexao.php");
-$sql = "SELECT * FROM paciente WHERE iddono = $dono";
-$posse = mysqli_query($conexao, $sql);
-if (mysqli_num_rows($posse) == 0) {
+
+$sql = "SELECT * FROM paciente WHERE iddono = ?;";
+$comando = mysqli_prepare($conexao, $sql);
+mysqli_stmt_bind_param($comando, "i", $dono);
+mysqli_stmt_execute($comando);
+$resultado = mysqli_stmt_get_result($comando);
+$posse = mysqli_num_rows($resultado);
+
+if ($posse == 0) {
     echo "<p>Você não possui animais cadastrados.</p>";
     echo "<br>";
-    echo "<button><a href='../animais/form_animal.php'>Cadastre seu animal</a></button>";
+    echo "<button><a href='../pacientes/form_pacientes.php'>Cadastre seu animal</a></button>";
 } 
 //else {
 //    echo "<h2>Seus Animais:</h2>";
@@ -37,6 +44,5 @@ if (mysqli_num_rows($posse) == 0) {
 //    }
 //}
 ?>
-
 </body>
 </html>

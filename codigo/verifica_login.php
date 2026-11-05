@@ -2,11 +2,12 @@
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $sql = "SELECT * FROM dono WHERE email = '$email' AND senha = '$senha'";
-    
-    require_once "conexao.php";
-    $resultado = mysqli_query($conexao, $sql);
-
+    require_once("conexao.php");
+    $sql = "SELECT * FROM dono WHERE email = ? AND senha = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, "ss", $email, $senha);
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
     $quantidade = mysqli_num_rows($resultado);
     
     if ($quantidade == 1) {
